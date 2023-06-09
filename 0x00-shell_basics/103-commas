@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap1 | awk 'BEGIN{ORS=", "} {print} END{print "\n"}' | sed 's/,\s*$/,/'
+ls -Ap1 | awk '{printf "%s, ", $0} END{print ""}' | sed 's/,\s*$//'
